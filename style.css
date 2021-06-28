@@ -1,0 +1,158 @@
+*{margin: 0; padding: 0; border: 0;}
+
+body {
+    width: 1577px;
+}
+.container {
+    margin: 0 218px;
+    font-family: 'Montserrat', sans-serif;
+}
+h1 {
+    padding-top: 93px;
+    font-size: 32px;
+    text-align: center;
+    padding-bottom: 40px;
+    font-weight: 600;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+    height: 350px;
+}
+.material {
+    width: 48.5%;
+    position: relative;
+}       
+.place, .light {
+    width: 23%;
+    text-align: center;
+}
+.title {
+    height: 50px;
+    background-color: #F2F3F7;
+    margin-bottom: 30px;
+}
+h3 {
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    padding: 14px;
+}
+.material-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+h4 {
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+.producer {
+    position: absolute;
+    width: 50%;
+    left: 50%;
+}
+.type-link, .producer-link {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid #F2F3F7;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Montserrat';
+}
+.type-link {
+    margin-right: 10px;
+}
+.producer-link {
+    margin-left: 10px;
+}
+.pressed {
+    background-color: #CC0033;
+    color: rgb(255, 255, 255);
+}
+
+.calculator-action {
+    display: flex;
+    font-size: 22px;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+.minus, .plus {
+    font: inherit;
+    width: 38px;
+    height: 40px;
+}
+.value {
+    margin: 0 2px;
+    width: 53px;
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+}
+.alert {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 34px;
+}
+.pink {
+    color: #CC0033;
+}
+.result {
+    background-color: #F2F3F7;
+    width: 100%;
+    height: 92px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 72px;
+}
+h2 {
+    font-size: 24px;
+    font-weight: 400;
+}
+.price {
+    font-size: 32px;
+    font-weight: 700;
+    display: flex;
+}
+.result-price {
+    display: flex;
+    align-items: center;
+    width: 390px;
+    justify-content: space-between;
+    margin: 27px 0 27px 28px;
+}
+#result {
+    margin-right: 5px;
+}
+.form {
+    display: flex;
+}
+.form input[type="text"] {
+    height: 50px;
+    border-radius: 5px; 
+    vertical-align: middle; 
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 17px;
+    margin-right: 10px;
+}
+button[type="submit"] {
+    width: 180px;
+    height: 50px;
+    background-color: #FFD200;
+    margin-right: 49px;
+    border-radius: 5px; 
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}  
+
+

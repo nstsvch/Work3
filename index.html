@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="script.js" async></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Расчет стоимости натяжных потолков с установкой</h1>
+        <div class="content">
+            <div class="material">
+                <div class="title"><h3>1. Материал</h3></div>
+                <div class="material-content">
+                    <div class="type">
+                        <h4>Тип фактуры</h4>
+                        <button type="button" id="button" id="matt" class="type-link">Матовые</button>
+                        <button type="button" id="button" id="glanc" class="type-link">Глянцевые</button>
+                        <button type="button" id="button" id="satin" class="type-link">Сатиновые</button>
+                        <button type="button" id="button" id="tkan" class="type-link">Тканевые</button>
+                    </div>
+                    <div class="producer" id='matt'>
+                        <h4>Производитель</h4>
+                        <button type="button" class="producer-link" onclick="price.calcAndSetProducer(Producers.CLASSIC);">Classic</button>
+                        <button type="button" class="producer-link" onclick="price.calcAndSetProducer(Producers.PONGS);">Pongs</button>
+                        <button type="button" class="producer-link" onclick="price.calcAndSetProducer(Producers.EVOLUTION);">Evolution</button>
+                        <button type="button" class="producer-link" onclick="price.calcAndSetProducer(Producers.TEQTUM);">Teqtum</button>
+                        <button type="button" class="producer-link" onclick="price.calcAndSetProducer(Producers.PREMIUM);">Premium</button>
+                        <button type="button" class="producer-link" onclick="price.calcAndSetProducer(Producers.LUMFER);">Lumfer</button>
+                        <button type="button" class="producer-link" onclick="price.calcAndSetProducer(Producers.COLD_STRETCH);">Cold Stretch</button>
+                    </div>
+                    <div class="producer" id='tkan'>
+                        <h4>Производитель</h4>
+                        <button type="button" class="producer-link" onclick="price.calcAndSetProducer(Producers.D_PREMIUM);">D-Premium</button>
+                        <button type="button" class="producer-link" onclick="price.calcAndSetProducer(Producers.CLIPSO);">Clipso</button>
+                        <button type="button" class="producer-link" onclick="price.calcAndSetProducer(Producers.CERUTTI);">Cerutti</button>
+                    </div>
+                    <div class="producer" id='glanc'>
+                        <h4>Производитель</h4>
+                        <button type="button" class="producer-link" onclick="price.calcAndSetProducer(Producers.CLASSIC);">Classic</button>
+                        <button type="button" class="producer-link" onclick="price.calcAndSetProducer(Producers.PONGS);">Pongs</button>
+                        <button type="button" class="producer-link" onclick="price.calcAndSetProducer(Producers.EVOLUTION);">Evolution</button>
+                        <button type="button" class="producer-link" onclick="price.calcAndSetProducer(Producers.PREMIUM);">Premium</button>
+                        <button type="button" class="producer-link" onclick="price.calcAndSetProducer(Producers.LUMFER);">Lumfer</button>
+                
+                    </div>
+                    <div class="producer" id='satin'>
+                        <h4>Производитель</h4>
+                        <button type="button" class="producer-link" onclick="price.calcAndSetProducer(Producers.CLASSIC);">Classic</button>
+                        <button type="button" class="producer-link" onclick="price.calcAndSetProducer(Producers.PONGS);">Pongs</button>
+                        <button type="button" class="producer-link" onclick="price.calcAndSetProducer(Producers.EVOLUTION);">Evolution</button>
+                        <button type="button" class="producer-link" onclick="price.calcAndSetProducer(Producers.PREMIUM);">Premium</button>
+                        <button type="button" class="producer-link" onclick="price.calcAndSetProducer(Producers.LUMFER);">Lumfer</button>
+                    </div>
+                </div>
+            </div>
+            <div class="place">
+                <div class="title"><h3>2. Помещение</h3></div>
+                <div class="calculator">
+                    <h4>Площадь, м2</h4>
+                    <div class="calculator-action"> 
+                        <button class="minus" type="button" onclick="price.calcAndDecSquare()">-</button>
+                        <input type="text" class="value" value="0" id="count" name="name">
+                        <button class="plus" type="button" onclick="price.calcAndIncSquare()">+</button> 
+                    </div>   
+                </div>
+                <div class="calculator">
+                    <h4>Углы, шт</h4>
+                    <div class="calculator-action"> 
+                        <button class="minus" type="button" onclick="price.calcAndDecAngle()">-</button>
+                        <input type="text" class="value" value="4" id="count_angle" name="name">
+                        <button class="plus" type="button" onclick="price.calcAndIncAngle()">+</button>   
+                    </div>
+                </div>
+            </div>
+            <div class="light">
+                <div class="title"><h3>3. Освещение</h3></div>
+                <div class="calculator">
+                    <h4>Светильники, шт</h4>
+                    <div class="calculator-action"> 
+                        <button class="minus" type="button" onclick="price.calcAndDecLamp()">-</button>
+                        <input type="text" class="value" value="0" id="count" name="name">
+                        <button class="plus" type="button" onclick="price.calcAndIncLamp()">+</button> 
+                    </div>   
+                </div>
+                <div class="calculator">
+                    <h4>Люстры, шт</h4>
+                    <div class="calculator-action"> 
+                        <button class="minus" type="button" onclick="price.calcAndDecLustra()">-</button>
+                        <input type="text" class="value" value="0" id="count" name="name">
+                        <button class="plus" type="button" onclick="price.calcAndIncLustra()">+</button> 
+                    </div>      
+                </div>
+            </div>
+        </div>
+        <p class="alert"><span class="pink">Если введённые вами параметры верны</span>, то это окончательная стоимость полотен с установкой! 
+            <br>Фактуру, цвет, аксессуары можно выбрать по образцам у замерщика.</p>
+        <div class="result">
+            <div class="result-price">
+                <h2>Итоговая стоимость:</h2>
+                <div class="price">
+                    <p id="result">0</p> 
+                    <p>₽</p>
+                </div>
+            </div>
+            <form action="post" class="form">
+                <input type="text" placeholder="Ваш телефон">
+                <button type="submit">Оформить заказ</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
